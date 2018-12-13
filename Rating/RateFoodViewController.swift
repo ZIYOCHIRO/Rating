@@ -9,11 +9,14 @@
 import UIKit
 
 class RateFootViewController: UIViewController {
+    
     @IBOutlet weak var menuView: UIViewX!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var buttonview: UIView!
     @IBOutlet weak var slideUpbotton: UIButton!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var thumbImageView: UIImageView!
+    
     
     @IBOutlet weak var twitter: UIButton!
     @IBOutlet weak var facebook: UIButton!
@@ -22,51 +25,78 @@ class RateFootViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideShareButtons()
+        hideShareButtons()
     }
     
     @IBAction func slideUpAndDown(_ sender: UIButton) {
+        bottomViewAnimation()
+    }
+    @IBAction func panMenuCard(_ sender: UIPanGestureRecognizer) {
         
-        self.bottomViewAnimation()
-    }
-    func hideShareButtons() {
-        twitter.alpha = 0
-        facebook.alpha = 0
-        googlePlus.alpha = 0
-        instragram.alpha = 0
-    }
-    
-    func bottomViewAnimation() {
-        if buttonview.transform == CGAffineTransform.identity {
-            UIView.animate(withDuration: 1, animations: {
-                self.buttonview.transform = CGAffineTransform(scaleX: 11, y: 11)
-                self.bottomView.transform = CGAffineTransform(translationX: 0, y: -67)
-                self.slideUpbotton.transform = CGAffineTransform(rotationAngle: self.radians(180))
-            }) { (true) in
-                self.toggleShareButton()
-            }
+        let menuCard = sender.view!
+        let point = sender.translation(in: menuCard)
+        let xFromCenter = menuCard.center.x - view.center.x  // >0 :right
+        let moveRatio = xFromCenter / (view.center.x)
+        // move the card
+        menuCard.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
+        // rotate the card and make it smaller when reached 100
+        let scale = min(100/abs(xFromCenter), 1)
+        menuCard.transform = CGAffineTransform(rotationAngle: radians(35) * moveRatio).scaledBy(x: scale, y: scale)
+        if xFromCenter > 0 {
+            thumbImageView.image = UIImage(named: "thumbs_up")
+            thumbImageView.tintColor = UIColor.green
         } else {
-            UIView.animate(withDuration: 1, animations: {
-                self.buttonview.transform = CGAffineTransform.identity
-                self.bottomView.transform = CGAffineTransform.identity
-                self.slideUpbotton.transform = CGAffineTransform.identity
-            }) { (true) in
-                self.toggleShareButton()
+            thumbImageView.image = UIImage(named: "thumbs_down")
+            thumbImageView.tintColor = UIColor.red
+        }
+        // change the alpha of thumbs image
+        thumbImageView.alpha  = abs(moveRatio)
+        if sender.state == UIGestureRecognizer.State.ended {
+            // reach certain margin, go off the screen automatically
+            if menuCard.center.x < 75 {
+                // move off to the left side
+                UIView.animate(withDuration: 0.3, animations: {
+                    menuCard.center = CGPoint(x: menuCard.center.x - 200, y: menuCard.center.y + 75)
+                    menuCard.alpha = 0
+                })
+                return
+            } else if menuCard.center.x > (view.frame.width - 75) {
+                // move off to the right side
+                UIView.animate(withDuration: 0.3, animations: {
+                    menuCard.center = CGPoint(x: menuCard.center.x + 200, y: menuCard.center.y + 75)
+                    menuCard.alpha = 0
+                })
+                return
             }
+            
+            // card reset here, to get rid of this the code above need return 
+            UIView.animate(withDuration: 0.2, animations: {
+                menuCard.center = self.view.center
+                self.thumbImageView.alpha = 0
+            })
+            resetCard()
+           
         }
     }
     
-    func radians(_ degrees: Double) -> CGFloat {
-        return CGFloat(degrees * Double.pi / 180)
+    @IBAction func reset(_ sender: Any) {
+        self.resetCard()
     }
-    func toggleShareButton() {
-        let alpha = CGFloat(facebook.alpha == 0 ? 1 : 0)
-        twitter.alpha = alpha
-        facebook.alpha = alpha
-        googlePlus.alpha = alpha
-        instragram.alpha = alpha
-        
+    
+    func resetCard() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.menuView.center = self.view.center
+            self.thumbImageView.alpha = 0
+            self.menuView.alpha = 1
+            self.menuView.transform = CGAffineTransform.identity
+            
+        })
     }
+    
     
     
 }
+
+
+
+

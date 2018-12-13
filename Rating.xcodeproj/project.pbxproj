@@ -19,6 +19,7 @@
 		0D59A00021C22974007EFF39 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D599FFF21C22974007EFF39 /* UIImageViewX.swift */; };
 		0D59A00221C229F5007EFF39 /* RateFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */; };
 		0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B483B21C22335006D13B2 /* UIViewX.swift */; };
+		0DF271FD21C24F8700B4D325 /* RateFoodVCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0D599FFF21C22974007EFF39 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodViewController.swift; sourceTree = "<group>"; };
 		0D7B483B21C22335006D13B2 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodVCMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				0D0512A321C1FD900079CA88 /* UIButtonX.swift */,
 				0D05127421C1F3190079CA88 /* ViewController.swift */,
 				0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */,
+				0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */,
 				0D05127621C1F3190079CA88 /* Main.storyboard */,
 				0D05127C21C1F31A0079CA88 /* Assets.xcassets */,
 				0D05127E21C1F31A0079CA88 /* LaunchScreen.storyboard */,
@@ -277,6 +280,7 @@
 				0D05127321C1F3190079CA88 /* AppDelegate.swift in Sources */,
 				0D59A00021C22974007EFF39 /* UIImageViewX.swift in Sources */,
 				0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */,
+				0DF271FD21C24F8700B4D325 /* RateFoodVCMenu.swift in Sources */,
 				0D05127B21C1F3190079CA88 /* Rating.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
