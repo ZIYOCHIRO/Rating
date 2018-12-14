@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="E7L-s8-t0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,15 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-nY-lUb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="N5N-nY-lUb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TASTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-pG-FSa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TASTE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X1d-pG-FSa">
                                 <rect key="frame" x="112" y="65" width="190" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="S1f-OE-cqL"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="zhb-Va-KRd"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="71"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,7 +47,7 @@
                                         <state key="normal" image="start"/>
                                         <connections>
                                             <action selector="startRating:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GG-pO-KME"/>
-                                            <segue destination="3Sp-3U-3hQ" kind="show" id="Jof-2e-hgH"/>
+                                            <segue destination="sef-TZ-5UC" kind="show" id="3Ng-zt-J2o"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -66,12 +64,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your food. Your rating." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQk-tJ-S6H">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your food. Your rating." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQk-tJ-S6H">
                                 <rect key="frame" x="105" y="184" width="204" height="108"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="204" id="AWR-TC-GZU"/>
-                                    <constraint firstAttribute="height" constant="108" id="GmK-id-c4a"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -79,16 +74,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="UQk-tJ-S6H" firstAttribute="top" secondItem="X1d-pG-FSa" secondAttribute="bottom" constant="34" id="13a-im-Ijo"/>
-                            <constraint firstItem="N5N-nY-lUb" firstAttribute="top" secondItem="X1d-pG-FSa" secondAttribute="bottom" constant="-150" id="4ZF-6q-61Y"/>
-                            <constraint firstItem="UQk-tJ-S6H" firstAttribute="centerX" secondItem="X1d-pG-FSa" secondAttribute="centerX" id="5Jj-nw-2Wi"/>
-                            <constraint firstItem="N5N-nY-lUb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KK6-k1-QPb"/>
-                            <constraint firstItem="N5N-nY-lUb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="M9Q-Ms-xhS"/>
-                            <constraint firstItem="N5N-nY-lUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YJQ-o1-Yi3"/>
-                            <constraint firstItem="X1d-pG-FSa" firstAttribute="centerX" secondItem="N5N-nY-lUb" secondAttribute="centerX" id="o0o-aW-lp8"/>
-                            <constraint firstItem="N5N-nY-lUb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rHF-0i-VQs"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="8hC-TD-aAM"/>
@@ -103,9 +88,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="132.06521739130434"/>
+            <point key="canvasLocation" x="-78" y="286"/>
         </scene>
-        <!--Rate Foot View Controller-->
+        <!--Rating-->
         <scene sceneID="asG-9k-0V5">
             <objects>
                 <viewController id="3Sp-3U-3hQ" customClass="RateFootViewController" customModule="Rating" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,14 +98,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="MlI-He-CUX">
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="MlI-He-CUX">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKN-Q4-4WQ" customClass="UIViewX" customModule="Rating" customModuleProvider="target">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKN-Q4-4WQ" customClass="UIViewX" customModule="Rating" customModuleProvider="target">
                                 <rect key="frame" x="32" y="175" width="350" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR1-EG-GTr">
-                                        <rect key="frame" x="108" y="62" width="135" height="21"/>
+                                        <rect key="frame" x="107.66666666666666" y="62.000000000000007" width="135" height="20.333333333333336"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,7 +128,7 @@
                                         <color key="tintColor" red="0.58132569779096488" green="1" blue="0.20837308197824289" alpha="0.77444118923611116" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate the dish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgF-7V-ghf">
-                                        <rect key="frame" x="51" y="15" width="249" height="54"/>
+                                        <rect key="frame" x="50.666666666666686" y="15" width="249" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -150,10 +137,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.34821714743589749" green="0.33436943714077627" blue="0.32336702362958686" alpha="0.67144097222222221" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="K3D-8V-pMe"/>
-                                    <constraint firstAttribute="width" constant="350" id="zsu-1F-UsR"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="15"/>
@@ -163,8 +146,9 @@
                                     <outletCollection property="gestureRecognizers" destination="8cc-mB-kNA" appends="YES" id="omY-0R-k4J"/>
                                 </connections>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-sc-RrL">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poZ-sc-RrL">
                                 <rect key="frame" x="0.0" y="688" width="414" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jlm-wy-ZTc" customClass="UIViewX" customModule="Rating" customModuleProvider="target">
                                         <rect key="frame" x="185" y="0.0" width="44" height="44"/>
@@ -178,7 +162,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyg-9X-sdS">
                                         <rect key="frame" x="185" y="0.0" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button" image="slidUp"/>
                                         <connections>
@@ -186,15 +170,11 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="gxP-Mm-ErT">
-                                        <rect key="frame" x="49" y="57" width="317" height="50"/>
+                                        <rect key="frame" x="49" y="57" width="245" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR9-A2-LeH" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="8HI-K8-DmY"/>
-                                                    <constraint firstAttribute="height" constant="50" id="zHs-ra-6FK"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="icons8-twitter"/>
                                                 <userDefinedRuntimeAttributes>
@@ -213,11 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pk-Fz-xWr" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
-                                                <rect key="frame" x="89" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="HxA-19-ceM"/>
-                                                    <constraint firstAttribute="width" constant="50" id="Odc-zK-yGb"/>
-                                                </constraints>
+                                                <rect key="frame" x="71" y="0.0" width="32" height="32"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="icons8-facebook"/>
                                                 <userDefinedRuntimeAttributes>
@@ -236,11 +212,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4A2-3z-rnq" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
-                                                <rect key="frame" x="178" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="0ki-ig-hcX"/>
-                                                    <constraint firstAttribute="width" constant="50" id="12i-Ms-TLY"/>
-                                                </constraints>
+                                                <rect key="frame" x="142" y="0.0" width="32" height="32"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="icons8-google_plus"/>
                                                 <userDefinedRuntimeAttributes>
@@ -259,11 +231,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z83-4y-Bxn" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
-                                                <rect key="frame" x="267" y="0.0" width="50" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="6P9-Qq-6Lu"/>
-                                                    <constraint firstAttribute="width" constant="50" id="hik-Wm-hTD"/>
-                                                </constraints>
+                                                <rect key="frame" x="213" y="0.0" width="32" height="32"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="icons8-instagram_new"/>
                                                 <userDefinedRuntimeAttributes>
@@ -286,12 +254,9 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="QNb-Yi-DXS"/>
-                                </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRD-Dp-v0C">
-                                <rect key="frame" x="181" y="98" width="57" height="40"/>
+                                <rect key="frame" x="178.66666666666666" y="98" width="57" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -304,19 +269,9 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="wKN-Q4-4WQ" firstAttribute="centerY" secondItem="Owd-aZ-cY3" secondAttribute="centerY" id="1Hu-aL-8ur"/>
-                            <constraint firstItem="poZ-sc-RrL" firstAttribute="leading" secondItem="Owd-aZ-cY3" secondAttribute="leading" id="2ot-vc-TrH"/>
-                            <constraint firstItem="wKN-Q4-4WQ" firstAttribute="centerX" secondItem="Owd-aZ-cY3" secondAttribute="centerX" id="AAR-AY-OAi"/>
-                            <constraint firstItem="poZ-sc-RrL" firstAttribute="trailing" secondItem="Owd-aZ-cY3" secondAttribute="trailing" id="Bru-8l-pm9"/>
-                            <constraint firstItem="MlI-He-CUX" firstAttribute="top" secondItem="Owd-aZ-cY3" secondAttribute="top" id="Kvn-H3-grj"/>
-                            <constraint firstItem="Owd-aZ-cY3" firstAttribute="bottom" secondItem="MlI-He-CUX" secondAttribute="bottom" id="NCh-dC-El0"/>
-                            <constraint firstAttribute="bottom" secondItem="poZ-sc-RrL" secondAttribute="bottom" constant="-67" id="QsX-gz-pXO"/>
-                            <constraint firstItem="MlI-He-CUX" firstAttribute="leading" secondItem="Owd-aZ-cY3" secondAttribute="leading" id="ao6-t2-vRN"/>
-                            <constraint firstItem="Owd-aZ-cY3" firstAttribute="trailing" secondItem="MlI-He-CUX" secondAttribute="trailing" id="yeq-6e-Qcp"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Owd-aZ-cY3"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Rating" image="food" id="UQY-j1-F5G"/>
                     <navigationItem key="navigationItem" id="dNF-rp-JSQ"/>
                     <connections>
                         <outlet property="bottomView" destination="poZ-sc-RrL" id="5sk-C4-E6V"/>
@@ -338,30 +293,47 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1740.5797101449277" y="130.43478260869566"/>
+            <point key="canvasLocation" x="1913" y="-204"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eif-y0-dFn">
+        <!--Mine-->
+        <scene sceneID="3uw-9b-lkL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E7L-s8-t0m" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4cJ-Hy-FaJ">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VwR-Ua-dNU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cQY-UU-04P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="xat-TJ-7xc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3BK-vL-esE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eI1-E9-yHi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mine" image="user" id="LRH-i3-LTj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KUH-pK-7Qh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="132.06521739130434"/>
+            <point key="canvasLocation" x="1914" y="462"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AKo-sj-F50">
+            <objects>
+                <tabBarController id="sef-TZ-5UC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0H-Am-NbN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Sp-3U-3hQ" kind="relationship" relationship="viewControllers" id="fwY-pl-G5h"/>
+                        <segue destination="xat-TJ-7xc" kind="relationship" relationship="viewControllers" id="X74-zg-Qo3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YR-4n-e4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="787" y="286"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="3673" height="5207"/>
         <image name="background1" width="3840" height="5760"/>
+        <image name="food" width="25" height="25"/>
         <image name="icons8-facebook" width="32" height="32"/>
         <image name="icons8-google_plus" width="32" height="32"/>
         <image name="icons8-instagram_new" width="32" height="32"/>
@@ -370,5 +342,6 @@
         <image name="slidUp" width="100" height="100"/>
         <image name="start" width="100" height="100"/>
         <image name="thumbs_up" width="96" height="96"/>
+        <image name="user" width="24" height="24"/>
     </resources>
 </document>
