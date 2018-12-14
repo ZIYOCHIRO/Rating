@@ -18,8 +18,10 @@
 		0D0512A421C1FD900079CA88 /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0512A321C1FD900079CA88 /* UIButtonX.swift */; };
 		0D59A00021C22974007EFF39 /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D599FFF21C22974007EFF39 /* UIImageViewX.swift */; };
 		0D59A00221C229F5007EFF39 /* RateFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */; };
+		0D5BD96021C3CE9700C0A995 /* UserVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD95F21C3CE9700C0A995 /* UserVCExtension.swift */; };
 		0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B483B21C22335006D13B2 /* UIViewX.swift */; };
-		0DF271FD21C24F8700B4D325 /* RateFoodVCMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */; };
+		0DF271FD21C24F8700B4D325 /* RateFoodVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF271FC21C24F8700B4D325 /* RateFoodVCExtension.swift */; };
+		0DFB3F7321C3BE7200DF5CBA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB3F7221C3BE7200DF5CBA /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +59,10 @@
 		0D0512A321C1FD900079CA88 /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		0D599FFF21C22974007EFF39 /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodViewController.swift; sourceTree = "<group>"; };
+		0D5BD95F21C3CE9700C0A995 /* UserVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVCExtension.swift; sourceTree = "<group>"; };
 		0D7B483B21C22335006D13B2 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
-		0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodVCMenu.swift; sourceTree = "<group>"; };
+		0DF271FC21C24F8700B4D325 /* RateFoodVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodVCExtension.swift; sourceTree = "<group>"; };
+		0DFB3F7221C3BE7200DF5CBA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +142,39 @@
 			path = RatingUITests;
 			sourceTree = "<group>";
 		};
+		0D5BD95E21C3CE5700C0A995 /* RateFoodController */ = {
+			isa = PBXGroup;
+			children = (
+				0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */,
+				0DF271FC21C24F8700B4D325 /* RateFoodVCExtension.swift */,
+			);
+			path = RateFoodController;
+			sourceTree = "<group>";
+		};
+		0D5BD96121C3CEC000C0A995 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0D05127421C1F3190079CA88 /* ViewController.swift */,
+			);
+			path = RootViewController;
+			sourceTree = "<group>";
+		};
+		0D5BD96221C3CED400C0A995 /* UserInfoController */ = {
+			isa = PBXGroup;
+			children = (
+				0DFB3F7221C3BE7200DF5CBA /* UserViewController.swift */,
+				0D5BD95F21C3CE9700C0A995 /* UserVCExtension.swift */,
+			);
+			path = UserInfoController;
+			sourceTree = "<group>";
+		};
 		0DFB3F7021C3824300DF5CBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				0D05127221C1F3190079CA88 /* AppDelegate.swift */,
-				0D05127421C1F3190079CA88 /* ViewController.swift */,
-				0D59A00121C229F5007EFF39 /* RateFoodViewController.swift */,
-				0DF271FC21C24F8700B4D325 /* RateFoodVCMenu.swift */,
+				0D5BD96121C3CEC000C0A995 /* RootViewController */,
+				0D5BD95E21C3CE5700C0A995 /* RateFoodController */,
+				0D5BD96221C3CED400C0A995 /* UserInfoController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,13 +321,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D0512A421C1FD900079CA88 /* UIButtonX.swift in Sources */,
+				0DFB3F7321C3BE7200DF5CBA /* UserViewController.swift in Sources */,
 				0D59A00221C229F5007EFF39 /* RateFoodViewController.swift in Sources */,
 				0D05127521C1F3190079CA88 /* ViewController.swift in Sources */,
 				0D05127321C1F3190079CA88 /* AppDelegate.swift in Sources */,
 				0D59A00021C22974007EFF39 /* UIImageViewX.swift in Sources */,
 				0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */,
-				0DF271FD21C24F8700B4D325 /* RateFoodVCMenu.swift in Sources */,
+				0DF271FD21C24F8700B4D325 /* RateFoodVCExtension.swift in Sources */,
 				0D05127B21C1F3190079CA88 /* Rating.xcdatamodeld in Sources */,
+				0D5BD96021C3CE9700C0A995 /* UserVCExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

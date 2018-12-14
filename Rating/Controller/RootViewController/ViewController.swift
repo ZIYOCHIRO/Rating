@@ -36,11 +36,11 @@ class ViewController: UIViewController {
             self.backgroundImageview.alpha = 0.8
         }) { (true) in
             // next animation
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 self.titleLabel.alpha = 1
             }, completion: { (true) in
                 // next animation
-                UIView.animate(withDuration: 1, animations: {
+                UIView.animate(withDuration: 0.5, animations: {
                     self.detailLabel.alpha = 1
                     }, completion: { (true) in
                         self.startButton.alpha = 1

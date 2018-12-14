@@ -24,15 +24,19 @@ extension RateFootViewController {
                 self.bottomView.transform = CGAffineTransform(translationX: 0, y: -67)
                 self.slideUpbotton.transform = CGAffineTransform(rotationAngle: self.radians(180))
             }) { (true) in
-                self.toggleShareButton()
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.toggleShareButton()
+                })
+                
             }
         } else {
             UIView.animate(withDuration: 1, animations: {
                 self.buttonview.transform = CGAffineTransform.identity
                 self.bottomView.transform = CGAffineTransform.identity
                 self.slideUpbotton.transform = CGAffineTransform.identity
-            }) { (true) in
                 self.toggleShareButton()
+            }) { (true) in
+                
             }
         }
     }
