@@ -21,6 +21,8 @@
 		0D5BD96021C3CE9700C0A995 /* UserVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD95F21C3CE9700C0A995 /* UserVCExtension.swift */; };
 		0D5BD9A121C543B400C0A995 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD9A021C543B400C0A995 /* LogInViewController.swift */; };
 		0D5BD9A321C543D700C0A995 /* SignUpViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD9A221C543D700C0A995 /* SignUpViewContoller.swift */; };
+		0D5BD9A521C5505B00C0A995 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD9A421C5505B00C0A995 /* RoundedWhiteButton.swift */; };
+		0D5BD9A721C5515200C0A995 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5BD9A621C5515100C0A995 /* HelperExtensions.swift */; };
 		0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B483B21C22335006D13B2 /* UIViewX.swift */; };
 		0DF271FD21C24F8700B4D325 /* RateFoodVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF271FC21C24F8700B4D325 /* RateFoodVCExtension.swift */; };
 		0DFB3F7321C3BE7200DF5CBA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFB3F7221C3BE7200DF5CBA /* UserViewController.swift */; };
@@ -64,6 +66,8 @@
 		0D5BD95F21C3CE9700C0A995 /* UserVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVCExtension.swift; sourceTree = "<group>"; };
 		0D5BD9A021C543B400C0A995 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		0D5BD9A221C543D700C0A995 /* SignUpViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewContoller.swift; sourceTree = "<group>"; };
+		0D5BD9A421C5505B00C0A995 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		0D5BD9A621C5515100C0A995 /* HelperExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		0D7B483B21C22335006D13B2 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		0DF271FC21C24F8700B4D325 /* RateFoodVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateFoodVCExtension.swift; sourceTree = "<group>"; };
 		0DFB3F7221C3BE7200DF5CBA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			children = (
 				0DFB3F7021C3824300DF5CBA /* Controller */,
 				0D05127621C1F3190079CA88 /* Main.storyboard */,
+				0D5BD9A621C5515100C0A995 /* HelperExtensions.swift */,
+				0D5BD9A421C5505B00C0A995 /* RoundedWhiteButton.swift */,
 				0D05127C21C1F31A0079CA88 /* Assets.xcassets */,
 				0DFB3F7121C3826000DF5CBA /* DesignableX */,
 				0D05127E21C1F31A0079CA88 /* LaunchScreen.storyboard */,
@@ -333,8 +339,10 @@
 				0D05127521C1F3190079CA88 /* ViewController.swift in Sources */,
 				0D05127321C1F3190079CA88 /* AppDelegate.swift in Sources */,
 				0D59A00021C22974007EFF39 /* UIImageViewX.swift in Sources */,
+				0D5BD9A721C5515200C0A995 /* HelperExtensions.swift in Sources */,
 				0D5BD9A321C543D700C0A995 /* SignUpViewContoller.swift in Sources */,
 				0D7B483C21C22335006D13B2 /* UIViewX.swift in Sources */,
+				0D5BD9A521C5505B00C0A995 /* RoundedWhiteButton.swift in Sources */,
 				0DF271FD21C24F8700B4D325 /* RateFoodVCExtension.swift in Sources */,
 				0D05127B21C1F3190079CA88 /* Rating.xcdatamodeld in Sources */,
 				0D5BD96021C3CE9700C0A995 /* UserVCExtension.swift in Sources */,
