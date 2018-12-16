@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Firebase
 class UserViewController: UIViewController {
     
     @IBOutlet weak var addButtonView: UIViewX!
@@ -51,6 +51,10 @@ class UserViewController: UIViewController {
     @IBAction func takeAPhoto(_ sender: Any) {
     }
     
+    @IBAction func handleLogOut(_ sender: Any) {
+        try! Auth.auth().signOut()
+       
+    }
     
 
     

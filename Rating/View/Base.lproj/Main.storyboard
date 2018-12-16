@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rating" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MenuViewController" customModule="Rating" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,6 @@
                                         <state key="normal" image="start"/>
                                         <connections>
                                             <action selector="startRating:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7GG-pO-KME"/>
-                                            <segue destination="sef-TZ-5UC" kind="show" id="3Ng-zt-J2o"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,7 +141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78.260869565217391" y="285.32608695652175"/>
+            <point key="canvasLocation" x="-78" y="285"/>
         </scene>
         <!--Rating-->
         <scene sceneID="asG-9k-0V5">
@@ -519,6 +518,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2F-rk-5jj">
+                                <rect key="frame" x="318" y="71" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                                <connections>
+                                    <action selector="handleLogOut:" destination="xat-TJ-7xc" eventType="touchUpInside" id="dKc-av-405"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -550,10 +557,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ht6-H9-DHY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="760"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jil-03-ET0" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
                                 <rect key="frame" x="20" y="43" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="goBack"/>
+                                <state key="normal" image="goBack"/>
                                 <connections>
                                     <action selector="goBack:" destination="6QM-Sh-xba" eventType="touchUpInside" id="Bd8-Hb-hQE"/>
                                 </connections>
@@ -610,6 +620,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ht6-H9-DHY" firstAttribute="leading" secondItem="fsw-bz-Y92" secondAttribute="leading" id="5Ls-yI-C7Z"/>
+                            <constraint firstAttribute="bottom" secondItem="Ht6-H9-DHY" secondAttribute="bottom" id="6fu-vi-b16"/>
+                            <constraint firstItem="Ht6-H9-DHY" firstAttribute="top" secondItem="Hvm-Wt-cH7" secondAttribute="top" id="Ozl-fF-IfW"/>
+                            <constraint firstItem="Ht6-H9-DHY" firstAttribute="trailing" secondItem="fsw-bz-Y92" secondAttribute="trailing" id="guo-pK-XxU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fsw-bz-Y92"/>
                     </view>
                     <connections>
@@ -625,7 +641,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="AKo-sj-F50">
             <objects>
-                <tabBarController id="sef-TZ-5UC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sef-TZ-5UC" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0H-Am-NbN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -648,45 +664,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-MQ-y32">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BI3-gV-tHf" customClass="UIButtonX" customModule="Rating" customModuleProvider="target">
                                 <rect key="frame" x="20" y="43" width="44" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="goBack"/>
+                                <state key="normal" image="goBack"/>
                                 <connections>
                                     <action selector="goBack:" destination="Blk-Yf-DFv" eventType="touchUpInside" id="MRs-8u-g6g"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uxf-iV-oDt">
-                                <rect key="frame" x="74" y="126" width="269" height="295"/>
+                                <rect key="frame" x="80" y="93" width="269" height="387"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1za-sp-0Uu">
-                                        <rect key="frame" x="14" y="35" width="240" height="225"/>
+                                        <rect key="frame" x="14" y="156" width="240" height="231"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-8u-Nd3">
-                                                <rect key="frame" x="99" y="8" width="61" height="21"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41i-Eo-oyg" customClass="UITextFieldX" customModule="Rating" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="55" width="143" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="41i-Eo-oyg">
-                                                <rect key="frame" x="74" y="49" width="143" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="username"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XbO-h6-fae">
-                                                <rect key="frame" x="74" y="102" width="143" height="30"/>
+                                                <rect key="frame" x="8" y="125" width="143" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdi-aV-ej1">
-                                                <rect key="frame" x="8" y="54" width="42" height="21"/>
+                                                <rect key="frame" x="8" y="26" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -700,14 +712,14 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcl-w8-Yfb">
-                                                <rect key="frame" x="14" y="172" width="42" height="21"/>
+                                                <rect key="frame" x="8" y="163" width="42" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kPV-0C-Vp1">
-                                                <rect key="frame" x="74" y="167" width="143" height="30"/>
+                                                <rect key="frame" x="8" y="192" width="143" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -716,18 +728,54 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-8u-Nd3">
+                                        <rect key="frame" x="117" y="4" width="61" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userForSignUp" translatesAutoresizingMaskIntoConstraints="NO" id="2un-SR-edZ" customClass="UIImageViewX" customModule="Rating" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="44" width="75" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="37.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zb8-K8-JNO">
+                                        <rect key="frame" x="98" y="118" width="98" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Tap to change"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ta4-xA-ezc" firstAttribute="trailing" secondItem="RKj-MQ-y32" secondAttribute="trailing" id="Asr-uB-Sqp"/>
+                            <constraint firstItem="ta4-xA-ezc" firstAttribute="bottom" secondItem="RKj-MQ-y32" secondAttribute="bottom" id="Bde-0b-sH8"/>
+                            <constraint firstItem="RKj-MQ-y32" firstAttribute="top" secondItem="0EF-g1-4sp" secondAttribute="top" id="LMu-Zd-az9"/>
+                            <constraint firstItem="RKj-MQ-y32" firstAttribute="leading" secondItem="ta4-xA-ezc" secondAttribute="leading" id="cKS-8c-PWw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ta4-xA-ezc"/>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="XbO-h6-fae" id="nvz-f6-3DD"/>
                         <outlet property="goBackButton" destination="BI3-gV-tHf" id="HyX-lJ-IMu"/>
                         <outlet property="passwordField" destination="kPV-0C-Vp1" id="TBy-d1-whY"/>
+                        <outlet property="profileImageView" destination="2un-SR-edZ" id="4fV-IX-5OR"/>
+                        <outlet property="tapToChangeProfileButton" destination="Zb8-K8-JNO" id="W9s-b0-G29"/>
                         <outlet property="userNameField" destination="41i-Eo-oyg" id="yPK-Sd-XiY"/>
                     </connections>
                 </viewController>
@@ -753,5 +801,6 @@
         <image name="start" width="100" height="100"/>
         <image name="thumbs_up" width="96" height="96"/>
         <image name="user" width="24" height="24"/>
+        <image name="userForSignUp" width="64" height="64"/>
     </resources>
 </document>

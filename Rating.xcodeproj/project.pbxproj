@@ -12,7 +12,7 @@
 		0D05128B21C1F31A0079CA88 /* RatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05128A21C1F31A0079CA88 /* RatingTests.swift */; };
 		0D05129621C1F31A0079CA88 /* RatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05129521C1F31A0079CA88 /* RatingUITests.swift */; };
 		0D5BD9AB21C5F31400C0A995 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */; };
-		0DBA16D921C604F0004805EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D121C604F0004805EA /* ViewController.swift */; };
+		0DBA16D921C604F0004805EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D121C604F0004805EA /* MenuViewController.swift */; };
 		0DBA16DA21C604F0004805EA /* UserVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D221C604F0004805EA /* UserVCExtension.swift */; };
 		0DBA16DB21C604F0004805EA /* RateFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D321C604F0004805EA /* RateFoodViewController.swift */; };
 		0DBA16DC21C604F0004805EA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D421C604F0004805EA /* UserViewController.swift */; };
@@ -27,6 +27,7 @@
 		0DBA16EF21C6051B004805EA /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16E821C6051B004805EA /* UIViewX.swift */; };
 		0DBA16F021C6051B004805EA /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16E921C6051B004805EA /* HelperExtensions.swift */; };
 		0DBA16F121C6051B004805EA /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16EA21C6051B004805EA /* RoundedWhiteButton.swift */; };
+		0DBA16F321C62D7B004805EA /* UITextFieldX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16F221C62D7B004805EA /* UITextFieldX.swift */; };
 		16430898691CE1A9413B7363 /* Pods_RatingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2C76C480AC289EF6E25072 /* Pods_RatingUITests.framework */; };
 		A8DBFFCD537F03E37F60BE83 /* Pods_Rating.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5663F31FB765283EE8E18855 /* Pods_Rating.framework */; };
 		E7636E5D1A4552B638EBDF8D /* Pods_RatingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 497C2D1714215839420DB5E3 /* Pods_RatingTests.framework */; };
@@ -62,7 +63,7 @@
 		0D05129521C1F31A0079CA88 /* RatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingUITests.swift; sourceTree = "<group>"; };
 		0D05129721C1F31A0079CA88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0DBA16D121C604F0004805EA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DBA16D121C604F0004805EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0DBA16D221C604F0004805EA /* UserVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVCExtension.swift; sourceTree = "<group>"; };
 		0DBA16D321C604F0004805EA /* RateFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateFoodViewController.swift; sourceTree = "<group>"; };
 		0DBA16D421C604F0004805EA /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		0DBA16E821C6051B004805EA /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		0DBA16E921C6051B004805EA /* HelperExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		0DBA16EA21C6051B004805EA /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		0DBA16F221C62D7B004805EA /* UITextFieldX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldX.swift; sourceTree = "<group>"; };
 		1E2C76C480AC289EF6E25072 /* Pods_RatingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		259F7ACAF41F06765464631C /* Pods-RatingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RatingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RatingTests/Pods-RatingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		497C2D1714215839420DB5E3 /* Pods_RatingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RatingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,13 +174,13 @@
 			isa = PBXGroup;
 			children = (
 				0DBA16D621C604F0004805EA /* AppDelegate.swift */,
-				0DBA16D121C604F0004805EA /* ViewController.swift */,
-				0DBA16D221C604F0004805EA /* UserVCExtension.swift */,
-				0DBA16D421C604F0004805EA /* UserViewController.swift */,
-				0DBA16D321C604F0004805EA /* RateFoodViewController.swift */,
-				0DBA16D821C604F0004805EA /* RateFoodVCExtension.swift */,
+				0DBA16D121C604F0004805EA /* MenuViewController.swift */,
 				0DBA16D521C604F0004805EA /* LogInViewController.swift */,
 				0DBA16D721C604F0004805EA /* SignUpViewContoller.swift */,
+				0DBA16D421C604F0004805EA /* UserViewController.swift */,
+				0DBA16D221C604F0004805EA /* UserVCExtension.swift */,
+				0DBA16D321C604F0004805EA /* RateFoodViewController.swift */,
+				0DBA16D821C604F0004805EA /* RateFoodVCExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -189,6 +191,7 @@
 				0DBA16E621C6051B004805EA /* Main.storyboard */,
 				0DBA16E821C6051B004805EA /* UIViewX.swift */,
 				0DBA16E221C6051B004805EA /* UIButtonX.swift */,
+				0DBA16F221C62D7B004805EA /* UITextFieldX.swift */,
 				0DBA16E321C6051B004805EA /* UIImageViewX.swift */,
 				0DBA16E921C6051B004805EA /* HelperExtensions.swift */,
 				0DBA16EA21C6051B004805EA /* RoundedWhiteButton.swift */,
@@ -453,9 +456,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBA16D921C604F0004805EA /* ViewController.swift in Sources */,
+				0DBA16D921C604F0004805EA /* MenuViewController.swift in Sources */,
 				0DBA16F021C6051B004805EA /* HelperExtensions.swift in Sources */,
 				0DBA16EC21C6051B004805EA /* UIImageViewX.swift in Sources */,
+				0DBA16F321C62D7B004805EA /* UITextFieldX.swift in Sources */,
 				0DBA16DC21C604F0004805EA /* UserViewController.swift in Sources */,
 				0DBA16DA21C604F0004805EA /* UserVCExtension.swift in Sources */,
 				0DBA16DE21C604F0004805EA /* AppDelegate.swift in Sources */,
@@ -644,6 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rating/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,6 +667,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Rating/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
