@@ -57,6 +57,9 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func startRating(_ sender: UIButton) {
+        
+    
+        
     }
     
 }

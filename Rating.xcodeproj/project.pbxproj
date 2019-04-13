@@ -11,7 +11,7 @@
 		0D05127D21C1F31A0079CA88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D05127C21C1F31A0079CA88 /* Assets.xcassets */; };
 		0D05128B21C1F31A0079CA88 /* RatingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05128A21C1F31A0079CA88 /* RatingTests.swift */; };
 		0D05129621C1F31A0079CA88 /* RatingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D05129521C1F31A0079CA88 /* RatingUITests.swift */; };
-		0D5BD9AB21C5F31400C0A995 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */; };
+		0D2A006422620CE9000B0C60 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D2A006322620CE9000B0C60 /* GoogleService-Info.plist */; };
 		0DBA16D921C604F0004805EA /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D121C604F0004805EA /* MenuViewController.swift */; };
 		0DBA16DA21C604F0004805EA /* UserVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D221C604F0004805EA /* UserVCExtension.swift */; };
 		0DBA16DB21C604F0004805EA /* RateFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA16D321C604F0004805EA /* RateFoodViewController.swift */; };
@@ -62,6 +62,7 @@
 		0D05129121C1F31A0079CA88 /* RatingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RatingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D05129521C1F31A0079CA88 /* RatingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingUITests.swift; sourceTree = "<group>"; };
 		0D05129721C1F31A0079CA88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D2A006322620CE9000B0C60 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Rating/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0DBA16D121C604F0004805EA /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		0DBA16D221C604F0004805EA /* UserVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVCExtension.swift; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		0D05126621C1F3190079CA88 = {
 			isa = PBXGroup;
 			children = (
+				0D2A006322620CE9000B0C60 /* GoogleService-Info.plist */,
 				0D05127121C1F3190079CA88 /* Rating */,
 				0D05128921C1F31A0079CA88 /* RatingTests */,
 				0D05129421C1F31A0079CA88 /* RatingUITests */,
@@ -142,10 +144,10 @@
 		0D05127121C1F3190079CA88 /* Rating */ = {
 			isa = PBXGroup;
 			children = (
-				0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */,
 				0DBA16E121C6051B004805EA /* View */,
 				0DBA16D021C604F0004805EA /* Controller */,
 				0D05127C21C1F31A0079CA88 /* Assets.xcassets */,
+				0D5BD9AA21C5F31400C0A995 /* GoogleService-Info.plist */,
 				0D05128121C1F31A0079CA88 /* Info.plist */,
 				0D05127921C1F3190079CA88 /* Rating.xcdatamodeld */,
 			);
@@ -295,13 +297,16 @@
 				TargetAttributes = {
 					0D05126E21C1F3190079CA88 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					0D05128521C1F31A0079CA88 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0D05126E21C1F3190079CA88;
 					};
 					0D05129021C1F31A0079CA88 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 0D05126E21C1F3190079CA88;
 					};
 				};
@@ -331,7 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D5BD9AB21C5F31400C0A995 /* GoogleService-Info.plist in Resources */,
+				0D2A006422620CE9000B0C60 /* GoogleService-Info.plist in Resources */,
 				0D05127D21C1F31A0079CA88 /* Assets.xcassets in Resources */,
 				0DBA16EE21C6051B004805EA /* Main.storyboard in Resources */,
 				0DBA16ED21C6051B004805EA /* LaunchScreen.storyboard in Resources */,
@@ -655,7 +660,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.Rating";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -674,7 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.Rating";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -694,7 +699,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.RatingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rating.app/Rating";
 			};
@@ -715,7 +720,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.RatingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rating.app/Rating";
 			};
@@ -735,7 +740,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.RatingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Rating;
 			};
@@ -755,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-000.RatingUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Rating;
 			};
